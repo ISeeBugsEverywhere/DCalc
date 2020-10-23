@@ -25,16 +25,16 @@
             <TextView
                 android:id="@+id/ugen_text"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Ugen [V]"
+                android:text="@string/u_gen"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/ugen_field"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:ems="10"
                 android:inputType="numberDecimal"
@@ -78,9 +78,9 @@
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="U_0 [mV]"
+                android:text="@string/u_0"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -104,9 +104,9 @@
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Rapkr"
+                android:text="@string/r_ap"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -218,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="S [mm^2]"
+                android:text="@string/s_mm"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 

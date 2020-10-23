@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DCalc</string>
+    <string name="u_gen">U<sub>gen.</sub></string>
+    <string name="r_ap">R<sub>ap.</sub></string>
+    <string name="u_0">U<sub>0</sub></string>
+    <string name="s_mm">S [mm<sup>2</sup>]</string>
 </resources>
