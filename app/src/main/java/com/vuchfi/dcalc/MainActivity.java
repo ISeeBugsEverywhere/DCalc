@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pressButton = (Button) findViewById(R.id.button);
-        quitButton = (Button) findViewById(R.id.quit_button);
-        tInfoView = (TextView) findViewById(R.id.tInfoView);
-        pressButton.setOnClickListener(pressButtonClick);
-        quitButton.setOnClickListener(quitButtonClick);
+        pressButton = (Button) findViewById(R.id.calculate_button);
+//        quitButton = (Button) findViewById(R.id.quit_button);
+//        tInfoView = (TextView) findViewById(R.id.tInfoView);
+//        pressButton.setOnClickListener(pressButtonClick);
+//        quitButton.setOnClickListener(quitButtonClick);
 
     }
 
