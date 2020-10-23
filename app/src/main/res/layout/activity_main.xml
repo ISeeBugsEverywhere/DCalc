@@ -4,246 +4,280 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="Ugen [V]"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/ugen_field"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/ugen_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="10"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Δt [ms]"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/delta_t_field"
-        app:layout_constraintHorizontal_bias="0.209"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="97dp" />
-
-    <EditText
-        android:id="@+id/delta_t_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="35dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="20"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/upeak_field"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/ugen_field"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Upeak [mV]"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/upeak_field"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="192dp" />
-
-    <EditText
-        android:id="@+id/upeak_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="10"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="184dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Rapkr [Ω/kΩ]"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="259dp" />
-
-    <EditText
-        android:id="@+id/ohms_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="50"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="258dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:checkedButton="@id/ohms_button"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="321dp">
-
-        <RadioButton
-            android:id="@+id/ohms_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Ω"
-            android:textSize="24sp" />
-
-        <RadioButton
-            android:id="@+id/kohms_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="kΩ"
-            android:textSize="24sp" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="ε"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="395dp" />
-
-    <EditText
-        android:id="@+id/epsilon_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="3.5"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="389dp" />
-
-    <RadioButton
-        android:id="@+id/d_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:checked="true"
-        android:text="d [mm]"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="458dp" />
-
-    <EditText
-        android:id="@+id/d_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="3"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="464dp" />
-
-    <RadioButton
-        android:id="@+id/s_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="S [mm^2]"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="532dp" />
-
-    <EditText
-        android:id="@+id/s_field"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:text="8"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="532dp" />
-
-    <TextView
-        android:id="@+id/answer_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:text="Ats.: x μm"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/calculate_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/s_field" />
-
-    <Button
-        android:id="@+id/calculate_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="172dp"
-        android:text="D?"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/quit_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
-
-    <Button
-        android:id="@+id/quit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:text="Quit!"
-        android:textSize="24sp"
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calculate_button"
-        app:layout_constraintTop_toBottomOf="@+id/answer_text" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/ugen_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ugen [V]"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ugen_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="10"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Δt [μs]"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/delta_t_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="20"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="U_0 [mV]"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/upeak_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="10"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rapkr"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/rapkr_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="50"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+
+                <RadioButton
+                    android:id="@+id/ohms_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Ω"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/kohms_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="kΩ"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ε"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/epsilon_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="3.5"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <CheckBox
+                android:id="@+id/d_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="d [mm]"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/d_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="3"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <CheckBox
+                android:id="@+id/s_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="S [mm^2]"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/s_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="8"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/x_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Atsakymas : x μm."
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <Button
+                android:id="@+id/calc_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="D?"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                app:barrierDirection="top" />
+
+            <Button
+                android:id="@+id/quit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Quit!"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </TableRow>
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
