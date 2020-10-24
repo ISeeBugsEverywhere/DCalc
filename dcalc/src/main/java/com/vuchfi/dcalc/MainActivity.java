@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -115,23 +116,33 @@ public class MainActivity extends AppCompatActivity {
     //naudingos funkcijos:
     private void calcButtonFunction()
     {
-        xField.setText("Atsakymas :) μm");
-        Ugen = Double.parseDouble(ugenField.getText().toString());
-        Upeak = Double.parseDouble(upeakField.getText().toString());
-        Rapkr = Double.parseDouble(rField.getText().toString());
-        e = Double.parseDouble(eField.getText().toString());
-        d = Double.parseDouble(dField.getText().toString());
-        S = Double.parseDouble(sField.getText().toString());
-        deltaT = Double.parseDouble(deltaTField.getText().toString());
-        get_dmkm();
-        String ss = "Atsakymas x μm";
-        xField.setText(ss.replace("x", String.valueOf(dmkm_)));
+        try
+        {
+
+
+            xField.setText("Atsakymas :) μm");
+            Ugen = Double.parseDouble(ugenField.getText().toString());
+            Upeak = Double.parseDouble(upeakField.getText().toString());
+            Rapkr = Double.parseDouble(rField.getText().toString());
+            e = Double.parseDouble(eField.getText().toString());
+            d = Double.parseDouble(dField.getText().toString());
+            S = Double.parseDouble(sField.getText().toString());
+            deltaT = Double.parseDouble(deltaTField.getText().toString());
+            get_dmkm();
+            String ss = "Atsakymas x μm";
+            xField.setText(ss.replace("x", String.valueOf(dmkm_)));
+        }
+        catch (Exception ex)
+        {
+            Toast.makeText(this, "Įvesta ne skaičiai?", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
     private void quitButtonFunction()
     {
-        finishAffinity();
+        Toast.makeText(this, "Išjungiama", Toast.LENGTH_SHORT).show();
+        finishAndRemoveTask();
     }
 
     private void get_dmkm ()
@@ -157,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             S_ = 1e-6*S;
         }
         dmkm = e*e0*Ugen/((deltaT*1e-6)*((Upeak*1e-3)/((Rapkr*factorR)*S_)));
-        dmkm_ = Math.round((dmkm / 1e-6)*1000d)/1000d;
+        dmkm_ = Math.round((dmkm / 1e-6)*1000d)/1000d; //μm...
     }
 
 }
