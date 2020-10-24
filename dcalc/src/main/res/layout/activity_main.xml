@@ -24,12 +24,11 @@
 
             <TextView
                 android:id="@+id/ugen_text"
-                android:layout_width="200dp"
-                android:layout_height="37dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/u_gen"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/ugen_field"
@@ -39,8 +38,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="10"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
         </TableRow>
 
@@ -55,8 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Δt [μs]"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/delta_t_field"
@@ -66,8 +63,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="20"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -81,8 +77,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/u_0"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/upeak_field"
@@ -92,8 +87,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="10"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -107,8 +101,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/r_ap"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/rapkr_field"
@@ -118,8 +111,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="50"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -141,8 +133,7 @@
                     android:layout_weight="1"
                     android:checked="true"
                     android:text="Ω"
-                    android:textAlignment="center"
-                    android:textSize="18sp" />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/kohms_button"
@@ -150,8 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="kΩ"
-                    android:textAlignment="center"
-                    android:textSize="18sp" />
+                    android:textAlignment="center" />
             </RadioGroup>
         </TableRow>
 
@@ -166,8 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="ε"
-                android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/epsilon_field"
@@ -177,8 +166,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="3.5"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -193,8 +181,7 @@
                 android:layout_weight="1"
                 android:checked="true"
                 android:text="d [mm]"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/d_field"
@@ -204,8 +191,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="3"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -219,8 +205,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/s_mm"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/s_field"
@@ -230,8 +215,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:text="8"
-                android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
